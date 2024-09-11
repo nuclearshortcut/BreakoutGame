@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://djic7t8rvle1h"]
+
+[ext_resource type="PackedScene" uid="uid://br1s1tvgkc4b0" path="res://Scenes/brick.tscn" id="1_fxht3"]
+[ext_resource type="Texture2D" uid="uid://c7npwwew8ymb0" path="res://Tileset/bricks.png" id="2_nsovd"]
+
+[node name="Green" instance=ExtResource("1_fxht3")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-1, 6)
+texture = ExtResource("2_nsovd")
+frame = 8

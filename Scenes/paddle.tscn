@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnj1hhswob6gi"]
+
+[ext_resource type="Texture2D" uid="uid://jimrr7e0m5d0" path="res://Tileset/paddles_and_balls.png" id="1_3utwi"]
+[ext_resource type="Script" path="res://Scenes/paddle.gd" id="1_gf6im"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltrdg"]
+size = Vector2(32, 9.5)
+
+[node name="Paddle" type="CharacterBody2D"]
+scale = Vector2(5, 5)
+collision_mask = 6
+script = ExtResource("1_gf6im")
+
+[node name="PaddleImage" type="Sprite2D" parent="."]
+texture = ExtResource("1_3utwi")
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 71, 96, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_ltrdg")

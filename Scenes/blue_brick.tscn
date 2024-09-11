@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bof0yjw7gsn4d"]
+
+[ext_resource type="PackedScene" uid="uid://br1s1tvgkc4b0" path="res://Scenes/brick.tscn" id="1_g0y8j"]
+[ext_resource type="Texture2D" uid="uid://c7npwwew8ymb0" path="res://Tileset/bricks.png" id="2_f8d8e"]
+
+[node name="Blue" instance=ExtResource("1_g0y8j")]
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(-1, -12)
+texture = ExtResource("2_f8d8e")
+vframes = 6
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-1, 1)

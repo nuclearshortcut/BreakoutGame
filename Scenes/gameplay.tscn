@@ -1,0 +1,158 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwed657rwiw3y"]
+
+[ext_resource type="PackedScene" uid="uid://dnj1hhswob6gi" path="res://Scenes/paddle.tscn" id="1_6eq1o"]
+[ext_resource type="Script" path="res://Scenes/gameplay.gd" id="1_bapd1"]
+[ext_resource type="PackedScene" uid="uid://ble36mbk27ih7" path="res://Scenes/ball.tscn" id="3_a4n7p"]
+[ext_resource type="PackedScene" uid="uid://bof0yjw7gsn4d" path="res://Scenes/blue_brick.tscn" id="3_xsmdk"]
+[ext_resource type="PackedScene" uid="uid://dcgfy8h8sjqpc" path="res://Scenes/ui.tscn" id="5_6mqmh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxj43"]
+size = Vector2(65, 646)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feawn"]
+size = Vector2(1149, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rnsc"]
+size = Vector2(58, 641)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08hon"]
+size = Vector2(1148, 70)
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource("1_bapd1")
+
+[node name="Barriers" type="Node2D" parent="."]
+
+[node name="B1" type="StaticBody2D" parent="Barriers"]
+position = Vector2(-56, 343)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers/B1"]
+position = Vector2(22.5, -18)
+shape = SubResource("RectangleShape2D_nxj43")
+
+[node name="B2" type="StaticBody2D" parent="Barriers"]
+position = Vector2(564, -59)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers/B2"]
+position = Vector2(11.5, 24)
+shape = SubResource("RectangleShape2D_feawn")
+
+[node name="B3" type="StaticBody2D" parent="Barriers"]
+position = Vector2(1186, 320)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers/B3"]
+position = Vector2(-5, 2.5)
+shape = SubResource("RectangleShape2D_0rnsc")
+
+[node name="BallKiller" type="Area2D" parent="Barriers" groups=["BallKiller"]]
+position = Vector2(570, 708)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers/BallKiller"]
+position = Vector2(7, -25)
+shape = SubResource("RectangleShape2D_08hon")
+
+[node name="Bricks" type="Node2D" parent="."]
+
+[node name="Blue" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(65, 61)
+
+[node name="Blue2" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(193, 61)
+
+[node name="Blue3" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(321, 61)
+
+[node name="Blue4" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(449, 61)
+
+[node name="Blue5" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(577, 61)
+
+[node name="Blue6" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(705, 61)
+
+[node name="Blue7" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(833, 61)
+
+[node name="Blue8" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(961, 61)
+
+[node name="Blue9" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(1089, 61)
+
+[node name="Blue10" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(66, 144)
+
+[node name="Blue11" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(194, 144)
+
+[node name="Blue12" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(322, 144)
+
+[node name="Blue13" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(450, 144)
+
+[node name="Blue14" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(578, 144)
+
+[node name="Blue15" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(706, 144)
+
+[node name="Blue16" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(834, 144)
+
+[node name="Blue17" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(962, 144)
+
+[node name="Blue18" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(1090, 144)
+
+[node name="Blue19" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(66, 228)
+
+[node name="Blue20" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(194, 228)
+
+[node name="Blue21" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(322, 228)
+
+[node name="Blue22" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(450, 228)
+
+[node name="Blue23" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(578, 228)
+
+[node name="Blue24" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(706, 228)
+
+[node name="Blue25" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(834, 228)
+
+[node name="Blue26" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(962, 228)
+
+[node name="Blue27" parent="Bricks" instance=ExtResource("3_xsmdk")]
+position = Vector2(1090, 228)
+
+[node name="Paddle" parent="." instance=ExtResource("1_6eq1o")]
+position = Vector2(574, 611)
+
+[node name="Ball" parent="." instance=ExtResource("3_a4n7p")]
+position = Vector2(574, 560)
+
+[node name="UI" parent="." instance=ExtResource("5_6mqmh")]
+
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="body_entered" from="Barriers/BallKiller" to="." method="_on_ball_killer_body_entered"]
+[connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]

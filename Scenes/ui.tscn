@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcgfy8h8sjqpc"]
+
+[ext_resource type="Script" path="res://Scenes/ui.gd" id="1_m1txb"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_m1txb")
+
+[node name="ScoreCounter" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScoreCounter"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 501.5
+offset_right = 610.5
+offset_bottom = 42.0
+grow_horizontal = 2
+
+[node name="ScoreLabel" type="Label" parent="ScoreCounter/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Score:"
+
+[node name="Score" type="Label" parent="ScoreCounter/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "0"
+
+[node name="Result" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ResultText" type="Label" parent="Result"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 1132.0
+offset_bottom = 628.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
